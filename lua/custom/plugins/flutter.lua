@@ -21,18 +21,18 @@ return {
     },
     debugger = {
       enabled = true,
-      run_via_dap = true,
+      run_via_dap = false,
       exception_breakpoints = {},
-      register_configurations = function(paths)
-        local dap = require 'dap'
-        -- See also: https://github.com/akinsho/flutter-tools.nvim/pull/292
-        dap.adapters.dart = {
-          type = 'executable',
-          command = paths.flutter_bin,
-          args = { 'debug-adapter' },
-        }
-        dap.configurations.dart = {}
-      end,
+      --      register_configurations = function(paths)
+      --        local dap = require 'dap'
+      --        -- See also: https://github.com/akinsho/flutter-tools.nvim/pull/292
+      --        dap.adapters.dart = {
+      --          type = 'executable',
+      --          command = paths.flutter_bin,
+      --          args = { 'debug-adapter' },
+      --        }
+      --        dap.configurations.dart = {}
+      --      end,
     },
   },
   config = true,
