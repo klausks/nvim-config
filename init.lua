@@ -697,8 +697,10 @@ require('lazy').setup({
         return '%2l:%-2v'
       end
 
-      -- ... and there is more!
-      --  Check out: https://github.com/echasnovski/mini.nvim
+      require('mini.jump').setup()
+      require('mini.move').setup()
+      require('mini.animate').setup()
+      require('mini.icons').setup()
     end,
   },
   { -- Highlight, edit, and navigate code
